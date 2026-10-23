@@ -57,7 +57,7 @@ const Home = () => {
 
   if (isError) {
     return (
-      <div className="min-h-screen w-full text-red-700 text-5xl font-medium">
+      <div className="min-h-screen w-full p-4 text-2xl font-medium text-red-700 sm:p-8 sm:text-4xl">
         <p>{FAILED_LOADING_DATA}</p>
       </div>
     );
@@ -65,7 +65,7 @@ const Home = () => {
 
   if (isLoading) {
     return (
-      <div className="min-h-screen w-full text-blue-700 text-5xl font-medium">
+      <div className="min-h-screen w-full p-4 text-2xl font-medium text-blue-700 sm:p-8 sm:text-4xl">
         <p>{LOADING_DATA}</p>
       </div>
     );
@@ -81,7 +81,7 @@ const Home = () => {
         buttonInfo="+ Add Movie"
         text="view only"
       />
-      <div className="flex flex-col space-y-10 p-12 bg-gray-100">
+      <div className="flex flex-col gap-4 bg-gray-100 p-4 sm:gap-6 sm:p-6 lg:gap-8 lg:p-12">
         {data?.data.map((movie) => (
           <MovieTile
             key={movie._id}

@@ -14,21 +14,21 @@ const MovieStatistics = ({
   releaseYear,
 }: MovieStatisticsTypes) => {
   return (
-    <div className="flex flex-row justify-center items-center space-x-80 p-12">
-      <div className="flex flex-col items-center justify-center px-48 py-6 bg-yellow-200 rounded-lg space-y-2">
+    <div className="grid grid-cols-1 gap-4 p-4 sm:grid-cols-3 sm:gap-4 sm:p-6 lg:gap-8 lg:p-12">
+      <div className="flex flex-col items-center justify-center space-y-2 rounded-lg bg-yellow-200 px-4 py-5 sm:px-6 lg:py-6">
         <IoStar className="text-yellow-600 text-4xl " />
-        <p className="text-yellow-700 font-bold text-4xl ">{rating}</p>
-        <p className="text-yellow-700 font-semibold text-3xl ">{RATING}</p>
+        <p className="text-2xl font-bold text-yellow-700 sm:text-3xl">{rating}</p>
+        <p className="text-lg font-semibold text-yellow-700 sm:text-xl">{RATING}</p>
       </div>
-      <div className="flex flex-col items-center justify-center px-48 py-6 bg-blue-200 rounded-lg space-y-2">
+      <div className="flex flex-col items-center justify-center space-y-2 rounded-lg bg-blue-200 px-4 py-5 sm:px-6 lg:py-6">
         <MdTimer className="text-blue-600 text-4xl" />
-        <p className="text-blue-700 font-bold text-4xl ">{duration}</p>
-        <p className="text-blue-700 font-semibold text-3xl ">{DURATIION}</p>
+        <p className="text-2xl font-bold text-blue-700 sm:text-3xl">{duration}</p>
+        <p className="text-lg font-semibold text-blue-700 sm:text-xl">{DURATIION}</p>
       </div>
-      <div className="flex flex-col items-center justify-center px-48 py-6 bg-green-200 rounded-lg space-y-2">
+      <div className="flex flex-col items-center justify-center space-y-2 rounded-lg bg-green-200 px-4 py-5 sm:px-6 lg:py-6">
         <FaCut className="text-green-700 text-4xl" />
-        <p className="text-green-700 font-bold text-4xl">{releaseYear}</p>
-        <p className="text-green-700 font-semibold text-3xl">{RELEASE_YEAR}</p>
+        <p className="text-2xl font-bold text-green-700 sm:text-3xl">{releaseYear}</p>
+        <p className="text-lg font-semibold text-green-700 sm:text-xl">{RELEASE_YEAR}</p>
       </div>
     </div>
   );

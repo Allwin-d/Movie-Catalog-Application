@@ -12,7 +12,7 @@ const MovieActions = ({ rating, id, onDeleteClick }: MovieActionsType) => {
 
   return (
     <div
-      className={`${token.role === "Admin" ? "flex flex-row space-x-20 font-bold text-4xl" : " font-bold text-4xl mr-10"}`}
+      className={`flex shrink-0 items-center gap-3 font-bold text-xl sm:gap-5 sm:text-2xl lg:gap-8 lg:text-3xl ${token.role !== "Admin" ? "mr-1" : ""}`}
     >
       <p className="cursor-pointer">⭐{rating}</p>
       <FaEye

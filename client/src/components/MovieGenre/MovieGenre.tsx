@@ -2,7 +2,7 @@ import type { GenreType } from "./MovieGenre.types";
 
 const MovieGenre = ({ genre }: GenreType) => {
   return (
-    <div className="flex flex-row space-x-4 text-xl">
+    <div className="flex flex-wrap gap-2 text-sm sm:gap-3 sm:text-base">
       {genre.map((genre: string, id: number) => (
         <p
           key={id}

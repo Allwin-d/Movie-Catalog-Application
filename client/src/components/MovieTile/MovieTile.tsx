@@ -15,9 +15,9 @@ const MovieTile = ({
   onDeleteClick
 }: MovieTileType) => {
   return (
-    <div className="flex flex-row items-center justify-between shadow-md p-4 transition-all duration-150 hover:shadow-xl">
+    <div className="flex flex-row items-center justify-between gap-3 rounded-xl bg-white p-3 shadow-md transition-all duration-150 hover:shadow-xl sm:gap-5 sm:p-5">
       {/* Left side section */}
-      <div className="flex flex-row space-x-20 items-center">
+      <div className="flex min-w-0 flex-1 items-center gap-3 sm:gap-6 lg:gap-10">
         <MoviePoster image={image} title={title} id ={id} />
         <MovieInfo
           title={title}

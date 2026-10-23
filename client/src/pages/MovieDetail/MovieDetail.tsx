@@ -48,21 +48,21 @@ const MovieDetail = () => {
   return (
     <div className="w-full min-h-screen bg-gray-100">
       <Header />
-      <div className="flex flex-row justify-start items-center space-x-10 p-12 bg-gradient-to-r from-purple-900 to-orange-800 ">
+      <div className="flex flex-col items-center gap-6 bg-gradient-to-r from-purple-900 to-orange-800 p-4 sm:p-6 lg:flex-row lg:items-start lg:gap-10 lg:p-12">
         <Image
           source={data?.image ?? ""}
           alt={data?.title ?? ""}
-          width="w-72"
-          height="h-2/4"
-          object="object-fill"
+          width="w-48 sm:w-56 lg:w-72"
+          height="h-auto"
+          object="object-cover"
           rounded="rounded-lg"
           shadow="shadow-xl shadow-gray-300"
         />
 
-        <div className="flex  justify-between items-center w-full">
+        <div className="flex w-full flex-col items-start justify-between gap-6 sm:flex-row sm:items-center">
           {/* Left Side section */}
-          <div className="flex flex-col space-y-14">
-            <p className="text-white text-4xl font-bold">{data?.title}</p>
+          <div className="flex min-w-0 flex-col gap-5 sm:gap-8 lg:gap-10">
+            <p className="break-words text-3xl font-bold text-white sm:text-4xl">{data?.title}</p>
             <MovieMetaData
               releaseYear={data?.releaseYear ?? 0}
               language={data?.language ?? ""}
@@ -70,12 +70,12 @@ const MovieDetail = () => {
               duration={data?.duration ?? 0}
             />
             <MovieGenre genre={data?.genre ?? []} />
-            <p className="px-8 py-4 bg-yellow-500 w-1/3 rounded-lg border-yellow-700 border-4 text-yellow-950 font-semibold text-2xl text-center">
+            <p className="w-fit rounded-lg border-2 border-yellow-700 bg-yellow-500 px-5 py-3 text-center text-xl font-semibold text-yellow-950 sm:border-4 sm:px-8 sm:py-4 sm:text-2xl">
               {data?.rating} / 10
             </p>
           </div>
           {/* Right Side Section */}
-          <div className="flex space-x-20 font-bold text-5xl ">
+          <div className="flex gap-6 font-bold text-3xl sm:gap-8 sm:text-4xl lg:gap-10">
             <FaEdit
               className={`cursor-pointer text-white transition duration-200 hover:scale-125 ${token.role === "User" ? "hidden" : "visible"}`}
             />

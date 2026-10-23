@@ -15,13 +15,13 @@ const DeleteModal = ({
 }: DeleteModalProps) => {
   return (
     // full screen overlay
-    <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4 backdrop-blur-sm">
       
       {/*  modal card */}
-      <div className="bg-white rounded-2xl w-[90%] max-w-md overflow-hidden shadow-2xl">
+      <div className="w-full max-w-md overflow-hidden rounded-2xl bg-white shadow-2xl">
         
         {/* TOP - red section */}
-        <div className="bg-red-50 px-8 pt-8 pb-6 flex flex-col items-center text-center border-b border-red-100">
+        <div className="flex flex-col items-center border-b border-red-100 bg-red-50 px-5 pb-6 pt-8 text-center sm:px-8">
           
           {/* icon */}
           <div className="w-16 h-16 rounded-full bg-red-100 flex items-center justify-center mb-4">
@@ -41,7 +41,7 @@ const DeleteModal = ({
         </div>
 
         {/* BOTTOM - action buttons */}
-        <div className="px-8 py-5 flex gap-3">
+        <div className="flex gap-3 px-5 py-5 sm:px-8">
           {/* cancel button */}
           <button
             onClick={onCancel}

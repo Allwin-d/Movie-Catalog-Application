@@ -13,7 +13,7 @@ const MoviePoster = ({ id, image, title }: MoviePosterType) => {
       <img
         src={image}
         alt={title}
-        className="w-40 h-50 rounded-lg shadow-md shadow-gray-400 transition duration-150 hover:scale-105 cursor-pointer "
+        className="h-36 w-24 shrink-0 cursor-pointer rounded-lg object-cover shadow-md shadow-gray-400 transition duration-150 hover:scale-105 sm:h-48 sm:w-32 lg:h-56 lg:w-40"
         onClick={() => handleNavigate(id)}
       />
     </div>
